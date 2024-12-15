@@ -114,11 +114,11 @@ function isAuthenticated(req, res, next) {
 }
 
 app.get('/protected', isAuthenticated, (req, res) => {
-  res.status(200).json({ message: 'Welcome to the protected route!', user: req.user });
+  res.status(200).json({ message: 'Welcome to the protected route!' });
 });
 
 app.get('/login-failed', isAuthenticated, (req, res) => {
-  res.status(200).json({ message: 'Login fail!', user: req.user });
+  res.status(200).json({ message: 'Login fail!' });
 });
 
 app.listen(PORT, () => {
